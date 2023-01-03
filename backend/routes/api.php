@@ -19,6 +19,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get("/dashboard", function () {
+   return "Welcome OverOption to AWS";
+});
+
 Route::get('/test', function () {
     try {
         DB::connection()->getPdo();

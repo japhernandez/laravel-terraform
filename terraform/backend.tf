@@ -211,7 +211,7 @@ resource "aws_codebuild_project" "backend" {
 
     // Use secrets manager on real builds:
     // https://stackoverflow.com/questions/64967922/docker-hub-login-for-aws-codebuild-docker-hub-limit
-    environment_variable {
+    /* environment_variable {
       name  = "DOCKERHUB_USERNAME"
       value = var.dockerhub_username
     }
@@ -219,7 +219,7 @@ resource "aws_codebuild_project" "backend" {
     environment_variable {
       name  = "DOCKERHUB_PASSWORD"
       value = var.dockerhub_password
-    }
+    } */
 
     environment_variable {
       name  = "BACKEND_REPOSITORY_URL"

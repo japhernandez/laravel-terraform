@@ -38,9 +38,9 @@ resource "aws_ecs_task_definition" "frontend" {
   memory = 512
 
   container_definitions = templatefile("${abspath(path.root)}/../frontend/taskdef.json", {
-    IMAGE_PATH   = aws_ecr_repository.frontend.repository_url
-    API_BASE_URL = "${aws_lb.alb.dns_name}/api"
-    API_SSR_URL  = "http://${aws_service_discovery_service.backend.name}.${aws_service_discovery_private_dns_namespace.discovery.name}/api"
+    IMAGE_PATH = aws_ecr_repository.frontend.repository_url
+    # API_BASE_URL = "${aws_lb.alb.dns_name}/api"
+    # API_SSR_URL  = "http://${aws_service_discovery_service.backend.name}.${aws_service_discovery_private_dns_namespace.discovery.name}/api"
   })
 }
 

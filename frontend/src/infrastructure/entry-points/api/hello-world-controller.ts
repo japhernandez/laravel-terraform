@@ -1,11 +1,11 @@
 import {Get, Mapping} from "@tsclean/core";
 
-@Mapping('/api/v1')
+@Mapping('/')
 export class HelloWorldController {
     constructor() {
     }
 
-    @Get('/hello-world')
+    @Get('hello-world')
     async getHelloWorld(): Promise<string> {
         return "Hello world"
     }

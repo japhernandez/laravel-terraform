@@ -1,6 +1,5 @@
 resource "aws_s3_bucket" "codepipeline_artifacts" {
   bucket        = "tf-sample-codepipeline-artifacts"
-  acl           = "private"
   force_destroy = true
 
   tags = {
